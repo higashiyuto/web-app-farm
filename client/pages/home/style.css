@@ -118,9 +118,7 @@ html, body {
   width: 60%;
   margin-left: 40px;
   margin-right: 30px;
-  margin-top: -68px; /* 上の余白をなくす */
-  padding: 24px;
-
+  margin-top: -105px; /* 上の余白をなくす */
   position: relative;   /* ← 追加 */
   z-index: 10;          /* ← 追加: 数字が大きいほど前面にくる */
 }
@@ -129,7 +127,6 @@ html, body {
 .tab {
   display: flex;
   gap: 4px;
-  margin-bottom: 16px;
   padding-left: 10px;
   background-color: #f3f4f6;
 }
