@@ -1,6 +1,5 @@
-//const hostname = window.location.hostname;
-//const BASE_URL = `http://${hostname}:3000`;
-const BASE_URL = window.location.origin;
+const isLocal = window.location.hostname === 'localhost';
+const BASE_URL = isLocal ? 'http://localhost:3000' : window.location.origin;
 
 let currentUser = null;
 export async function loadUserInfo() {
