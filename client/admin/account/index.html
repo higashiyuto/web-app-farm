@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>管理者ページ</title>
+</head>
+<body>
+    <h2>管理者ページ</h2>
+    <table id="user-table" border="1">
+        <thead>
+            <tr><th>name</th><th>age</th><th>email</th><th>image</th><th>createdAt</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+ 
+    <script>
+        async function loadUsers(){
+            const res = await fetch('http://localhost:3000/api/accounts/list');
+            const users = await res.json();
+
+            const tbody = document.querySelector('#user-table tbody');
+            tbody.innerHTML = '';
+
+            users.forEach(user=>{
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${user.name}</td>
+                    <td>${user.age}</td>
+                    <td>${user.email}</td>
+                    <td>${user.profileImage}</td>
+                    <td>${new Date(user.createdAt).toLocaleString()}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        loadUsers();
+    </script> 
+</body>
+</html>
