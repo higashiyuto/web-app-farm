@@ -25,9 +25,13 @@ app.use(cors());
 // 例: {"name": "Yuto", "age": 30}のようなJSONデータあったとき、これを
 //     サーバ側で「req.body」として扱えるようになる
 app.use(express.json()); 
-app.use(express.static(path.join(__dirname, '../client/pages/login/index.html')));
+app.use(express.static(path.join(__dirname, '../client')));
 app.use('/api/accounts', accountRoutes); //このURLのルートは「accountRoutes」に任せる
 app.use('/api/tweets', tweetRoutes);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/pages/login/index.html'));
+});
 
 //このファイルをモジュール化し「app」という名前でエクスポートする
 module.exports = app;
