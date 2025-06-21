@@ -1,0 +1,31 @@
+{
+  "name": "farm-app3",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "node server/server.js",
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "multer": "^2.0.1",
+    "sharp": "^0.34.2"
+  },
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "cd server && npm install",
+    "startCommand": "node server.js"
+  }
+}
