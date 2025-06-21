@@ -37,6 +37,15 @@
                 <button class="tab-button" data-tab="3">Talk</button>
             </div>
 
+            <!-- 検索ボックス本体（最初は非表示） -->
+            <div class="search-toggle-container">
+            <div id="search-box" class="search-box hidden">
+                <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input" />
+                <button id="search-button" class="form-button">検索</button>
+            </div>
+            <button id="toggle-search" class="toggle-icon">▼</button>
+            </div>
+
             <!-- タブ内容 -->
             <div id="tab-content-1" class="tab-content active">
                 <div id="tweetlist">

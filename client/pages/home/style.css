@@ -175,7 +175,7 @@ html, body {
 ======================== */
 .tab-content {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 10px;
   display: none;
 }
 
@@ -243,3 +243,53 @@ html, body {
   margin-top: 8px;
   object-fit: contain;
 }
+
+.search-toggle-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ボタンと検索ボックスを左寄せ */
+  gap: 8px; /* 余白 */
+}
+
+.search-box {
+  flex-grow: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 10px; /* 初期は上下paddingなし */
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.search-box.open {
+  max-height: 50px; /* inputとbuttonがちょうど収まる高さ */
+  display: flex;  /* 中身横並びに */
+  gap: 8px;
+  align-items: center;
+}
+
+#search-input {
+  flex-grow: 1;
+  height: 26px;
+  font-size: 1rem;
+}
+
+#search-button {
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: none;
+  border: none;
+}
+
+

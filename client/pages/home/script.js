@@ -14,3 +14,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupPostButton(currentUser);
     renderTweets(tweets, currentUser);
 });
+
+const toggleBtn = document.getElementById('toggle-search');
+const searchBox = document.getElementById('search-box');
+
+toggleBtn.addEventListener('click', () => {
+  const isOpen = searchBox.classList.toggle('open');
+  if (isOpen) {
+    toggleBtn.textContent = '▲';
+  } else {
+    toggleBtn.textContent = '▼';
+  }
+});
