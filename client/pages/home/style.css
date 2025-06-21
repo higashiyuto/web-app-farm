@@ -116,7 +116,7 @@ html, body {
 ======================== */
 .tab-container {
   width: 60%;
-  margin-left: 40px;
+  margin-left: 60px;
   margin-right: 30px;
   margin-top: -105px; /* 上の余白をなくす */
   position: relative;   /* ← 追加 */
@@ -127,8 +127,9 @@ html, body {
 .tab {
   display: flex;
   gap: 4px;
-  padding-left: 10px;
+  padding-left: 2s0px;
   background-color: #f3f4f6;
+  margin-bottom: 4px;
 }
 
 .tab-button {
