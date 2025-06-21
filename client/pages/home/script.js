@@ -1,6 +1,3 @@
-const hostname = window.location.hostname;
-const BASE_URL = `http://${hostname}:3000`;
-
 import { setupTabSwitching } from './ui/tab/controller.js';
 import { setupPostButton } from './ui/form/button.js';
 import { loadUserInfo } from '../../services/account/loadUserInfo.js';

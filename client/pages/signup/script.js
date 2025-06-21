@@ -8,8 +8,9 @@ const form_imageFile = document.getElementById('image');
 
 const sign_link = document.getElementById('toggle-link');
 
-const hostname = window.location.hostname;
-const BASE_URL = `http://${hostname}:3000`;
+//const hostname = window.location.hostname;
+//const BASE_URL = `http://${hostname}:3000`;
+const BASE_URL = window.location.origin;
 
 const message = document.getElementById('message');
 
