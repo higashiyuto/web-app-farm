@@ -12,7 +12,6 @@ html, body {
 ======================== */
 .header-container{
   width: 100%;
-  /*background-color:#fdfcf9;*/
   background-color:#faf7f0;
 }
 
@@ -153,7 +152,7 @@ html, body {
 .search-box {
   width: 100%;
   background-color: #f9fafb;
-  padding: 16px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.15),
               inset -3px -3px 6px rgba(255, 255, 255, 0.7);
