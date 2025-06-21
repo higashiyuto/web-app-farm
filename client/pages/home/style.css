@@ -12,13 +12,12 @@ html, body {
 ======================== */
 .header-container{
   width: 100%;
-  background-color:#faf7f0;
 }
 
 .header-name {
   background-color: #f5f0e1; /* ← 木っぽい極薄ブラウン */
   font-size: 1.5rem;
-  width: 100%;
+  width: 86%;
   margin-top: 10px;
   margin-left: 100px;
   font-family: 'Mochiy Pop One', sans-serif;
@@ -84,8 +83,31 @@ html, body {
   box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
 }
 
+.custom-file-button {
+  padding: 8.8px 5px 9.5px 5px;
+  font-size: 12px;
+  background: linear-gradient(145deg, #d7a86e, #a97442);
+  border: 2px solid #8b5e3c;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 5px #7b4f2a, inset -2px -2px 5px #c68c53;
+  font-family: 'Noto Sans JP', sans-serif;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.custom-file-button:hover {
+  background: #b97b45;
+  transform: scale(1.02);
+}
+
+.custom-file-button:active {
+  transform: scale(0.98);
+}
+
 .form-button {
-  padding: 10px 20px;
+  padding: 8px 20px;
   background: linear-gradient(145deg, #d7a86e, #a97442);
   border: 2px solid #8b5e3c;
   color: white;
@@ -117,8 +139,7 @@ html, body {
 .tab-container {
   width: 60%;
   margin-left: 60px;
-  margin-right: 30px;
-  margin-top: -105px; /* 上の余白をなくす */
+  margin-top: -150px; /* 上の余白をなくす */
   position: relative;   /* ← 追加 */
   z-index: 10;          /* ← 追加: 数字が大きいほど前面にくる */
 }
@@ -127,13 +148,13 @@ html, body {
 .tab {
   display: flex;
   gap: 4px;
-  padding-left: 2s0px;
   background-color: #f3f4f6;
   margin-bottom: 4px;
 }
 
 .tab-button {
-  padding: 14px 20px;
+  padding: 10px 30px;
+  font-size: 14px;
   border-radius: 6px;
   background-color: #d1d5db;
   color: #1e3a8a;
@@ -146,60 +167,11 @@ html, body {
   color: black;
 }
 
-/* 検索ボックス */
-.search-box {
-  width: 100%;
-  background-color: #f9fafb;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.15),
-              inset -3px -3px 6px rgba(255, 255, 255, 0.7);
-  border: 2px solid #d1d5db;
-  border-top-color: #4B5563;
-}
-
-.search-form {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.search-input {
-  width: 100%;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  outline: none;
-  background-color: white;
-}
-
-.search-input:focus {
-  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
-}
-
-.search-button {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 4px 12px;
-  border: 1px solid #ccc;
-  background-color: #f3f4f6;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: #e5e7eb;
-}
-
 /* ========================
    タブの中身表示
 ======================== */
 .tab-content {
+  width: 100%;
   margin-top: 10px;
   display: none;
 }
@@ -213,11 +185,11 @@ html, body {
 ======================== */
 #tweetlist,#worldtweetlist{
    position: relative; /* 追加 */
-  justify-content: space-between;
-  align-items: flex-start;
-  max-height: 500px;
-  overflow-y: auto;
-  padding-right: 8px;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-height: 500px;
+   overflow-y: auto;
+   padding-right: 8px;
 }
 
 /* ========================
@@ -231,7 +203,6 @@ html, body {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  max-width: 640px;
   margin-bottom: 16px;
 }
 
@@ -248,7 +219,6 @@ html, body {
   flex: 1;
   cursor: pointer;
 }
-
 
 .tweet-name {
   font-weight: bold;

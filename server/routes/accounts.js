@@ -1,3 +1,4 @@
+
 // Node.jsモジュールの読み込み
 const express = require('express');
 const bcrypt = require('bcrypt');
@@ -96,9 +97,11 @@ router.post('/login', async(req, res)=>{
   const {email, password} = req.body;
 
   try{
-    const user = await Account.findOne({email});
+    const user = await Account.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: 'ユーザーが存在しません' });
+    }
 
-    // bcryptでハッシュを比較
     const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) {
       return res.status(401).json({ error: 'メールアドレスまたはパスワードが違います' });
@@ -107,6 +110,7 @@ router.post('/login', async(req, res)=>{
     res.json({
       email: user.email,
       name: user.name,
+      profileImageUrl: user.profileImageUrl || '',
     });
   }catch(err){
     console.log(err);

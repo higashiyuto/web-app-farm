@@ -1,3 +1,6 @@
+const Tweet = require('../models/Tweet');
+const Account = require('../models/Account');
+
 // MongoDBをmongooseを使って利用する設定と、
 // データベースを「.env」のMONGO_URLをもとにつなげるためのファイル
 const mongoose = require('mongoose');

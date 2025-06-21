@@ -1,3 +1,4 @@
+
 require('dotenv').config(); //dotenvモジュールを読み込んで、config関数を実行することで「.env」が読み込めるようになる
 const app = require('./app'); 
 
