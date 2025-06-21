@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ログイン</title>
+</head>
+<body>
+    <div class="signup-container">
+        <h2 id="signup-title">ログイン</h2>
+        <form id="auth-form" enctype="multipart/form-data">
+            <input type="email"    id="email" name="email" placeholder="メールアドレス" required>
+            <input type="password" id="password" name="password" placeholder="パスワード" required>
+            <button type="submit">ログイン</button>
+        </form>
+        <div class="toggle-link" id="toggle-link">新規アカウント作成はこちら</div>
+        <div class="message" id="message"></div>
+    </div>
+ 
+    <script type="module" src="script.js"></script> 
+</body>
+</html>

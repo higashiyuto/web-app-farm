@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>サインアップ</title>
+</head>
+<body>
+    <div class="signup-container">
+        <h2 id="signup-title">サインアップ</h2>
+        <form id="auth-form" enctype="multipart/form-data">
+            <input type="text"     id="name"  name="name"  placeholder="名前" required>
+            <input type="number"   id="age"   name="age"   placeholder="年齢" required>
+            <input type="email"    id="email" name="email" placeholder="メールアドレス" required>
+            <input type="password" id="password" name="password" placeholder="パスワード" required>
+            <input type="file"     id="image" accept="image/*">
+            <button type="submit">登録する</button>
+        </form>
+        <div class="toggle-link" id="toggle-link">ログインはこちら</div>
+        <div class="message" id="message"></div>
+    </div>
+ 
+    <script type="module" src="script.js"></script> 
+</body>
+</html>
