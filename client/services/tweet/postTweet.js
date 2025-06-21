@@ -1,8 +1,9 @@
 import { renderTweets } from '../../pages/home/ui/tab/display.js';
 import { loadTweets } from './loadTweets.js';
 
-const hostname = window.location.hostname;
-const BASE_URL = `http://${hostname}:3000`;
+//const hostname = window.location.hostname;
+//const BASE_URL = `http://${hostname}:3000`;
+const BASE_URL = window.location.origin;
 
 export async function postTweet(user){
     const text = document.getElementById('tweetInput').value.trim();

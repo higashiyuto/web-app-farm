@@ -1,5 +1,6 @@
-const hostname = window.location.hostname;
-const BASE_URL = `http://${hostname}:3000`;
+//const hostname = window.location.hostname;
+//const BASE_URL = `http://${hostname}:3000`;
+const BASE_URL = window.location.origin;
 
 export async function loadTweets(currentUser){
     if(!currentUser) return;
