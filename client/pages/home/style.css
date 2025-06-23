@@ -22,7 +22,7 @@ html, body {
   width: 86%;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
   margin-left: 100px;
   font-family: 'Mochiy Pop One', sans-serif;
   font-size: 2rem;
@@ -140,6 +140,10 @@ html, body {
   display: none;
   width: 50px;
   height:30px; 
+}
+
+#image-name{
+  font-size: 10px;
 }
 
 .form-button:hover {

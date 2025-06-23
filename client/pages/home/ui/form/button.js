@@ -8,3 +8,12 @@ export function setupPostButton(currentUser){
         postTweet(currentUser);
     });
 }
+
+export function setImageButton(){
+    const imageSelectButton = document.getElementById('tweet-image');
+    const imageName = document.getElementById('image-name');
+    imageSelectButton.addEventListener('change', async()=>{
+        const file = imageSelectButton.files[0]
+        imageName.textContent = file.name;
+    });
+}

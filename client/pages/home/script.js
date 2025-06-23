@@ -1,5 +1,6 @@
 import { setupTabSwitching } from './ui/tab/controller.js';
 import { setupPostButton } from './ui/form/button.js';
+import { setImageButton } from './ui/form/button.js'
 import { loadUserInfo } from '../../services/account/loadUserInfo.js';
 import { loadTweets } from '../../services/tweet/loadTweets.js';
 import { renderTweets } from '../home/ui/tab/display.js';
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tweets = await loadTweets(currentUser);
 
     logoutButton();
+    setImageButton();
     setupPostButton(currentUser);
     renderTweets(tweets, currentUser);
 });
