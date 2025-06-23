@@ -284,7 +284,7 @@ html, body {
 }
 
 .search-box.open {
-  max-height: 50px; /* inputとbuttonがちょうど収まる高さ */
+  max-height: 30px; /* inputとbuttonがちょうど収まる高さ */
   display: flex;  /* 中身横並びに */
   gap: 8px;
   align-items: center;
@@ -292,13 +292,13 @@ html, body {
 
 #search-input {
   flex-grow: 1;
-  height: 26px;
+  height: 10px;
   font-size: 1rem;
 }
 
-#search-button {
-  padding: 4px 10px;
-  font-size: 14px;
+.search-button {
+  padding: 4px 5px;
+  font-size: 10px;
   cursor: pointer;
 }
 
