@@ -11,11 +11,13 @@ html, body {
    ヘッダー
 ======================== */
 .header-container{
-  width: 100%;
+  background-color: #f5f0e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-name {
-  background-color: #f5f0e1; /* ← 木っぽい極薄ブラウン */
   font-size: 1.5rem;
   width: 86%;
   padding-top: 10px;
@@ -29,7 +31,20 @@ html, body {
   text-shadow: 1px 1px 0 #fff4e0;
 }
 
-.header {
+.navigation {
+  display: flex;
+  padding-right: 30px;
+  gap: 10px;
+}
+
+#logout{
+  cursor: pointer;
+  padding: 8px 12px;
+  color: black;
+  border-radius: 4px;
+}
+
+.profile {
   position: relative;
   margin-top: 20px;
   margin-left: 100px;

@@ -3,6 +3,7 @@ import { setupPostButton } from './ui/form/button.js';
 import { loadUserInfo } from '../../services/account/loadUserInfo.js';
 import { loadTweets } from '../../services/tweet/loadTweets.js';
 import { renderTweets } from '../home/ui/tab/display.js';
+import { logoutButton } from './ui/header/logoutButton.js';
 
 let currentUser = null;
 document.addEventListener('DOMContentLoaded', async () => {
@@ -11,6 +12,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     setupTabSwitching(currentUser);
     const tweets = await loadTweets(currentUser);
+
+    logoutButton();
     setupPostButton(currentUser);
     renderTweets(tweets, currentUser);
 });
