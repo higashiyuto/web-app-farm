@@ -1,5 +1,6 @@
 import { renderWorldTweets } from './display.js';
 import { loadWorldTweets } from '../../../../services/tweet/loadWorldTweets.js';
+import { setupSearchToggle } from './setupSearchToggle.js';
 
 export async function setupTabSwitching(user){
     const tabButtons = document.querySelectorAll('.tab-button');

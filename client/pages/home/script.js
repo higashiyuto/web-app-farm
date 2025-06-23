@@ -5,6 +5,7 @@ import { loadUserInfo } from '../../services/account/loadUserInfo.js';
 import { loadTweets } from '../../services/tweet/loadTweets.js';
 import { renderTweets } from '../home/ui/tab/display.js';
 import { logoutButton } from './ui/header/logoutButton.js';
+import { setupSearchToggle } from './ui/tab/setupSearchToggle.js';
 
 let currentUser = null;
 document.addEventListener('DOMContentLoaded', async () => {
@@ -17,17 +18,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     logoutButton();
     setImageButton();
     setupPostButton(currentUser);
+    setupSearchToggle();
     renderTweets(tweets, currentUser);
-});
-
-const toggleBtn = document.getElementById('toggle-search');
-const searchBox = document.getElementById('search-box');
-
-toggleBtn.addEventListener('click', () => {
-  const isOpen = searchBox.classList.toggle('open');
-  if (isOpen) {
-    toggleBtn.textContent = '▲';
-  } else {
-    toggleBtn.textContent = '▼';
-  }
 });
