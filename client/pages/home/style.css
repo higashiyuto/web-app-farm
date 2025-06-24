@@ -1,222 +1,172 @@
-/* ========================
-   基本設定
-======================== */
 html, body {
+  height: 100%;
+  margin: 0;
   padding: 0;
-  height: 100vh;        /* 高さは常に画面ぴったり */
-  width: 100%;
-  overflow: hidden;     /* スクロール禁止 */
+  overflow: hidden; /* ← 全体のスクロールを禁止 */
 }
-/* ========================
-   ヘッダー
-======================== */
+/*
+    header
+*/
 .header-container{
-  background-color: #f5f0e1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    height: 10vh;
+    background-color: #f5f0e1;
+    display: flex; /* flex-boxの利用(要素をdefaultで横並びにする) */
+    align-items: center; /* Flex-boxの中でよく使うプロパティ縦方向の揃え方を決める */
+    justify-content: space-between; /* 左右の端に要素を配置 */
 }
 
-.header-name {
-  font-size: 1.5rem;
-  width: 86%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
-  margin-left: 100px;
-  font-family: 'Mochiy Pop One', sans-serif;
-  font-size: 2rem;
-  color: #4e3b1f; /* 木の色を意識したブラウン */
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 0 #fff4e0;
+.header-name{
+    font-size: 2rem;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: #4e3b1f;
+    text-shadow: 1px 1px 0 #fff4e0;
+    padding-left: 50px;
 }
 
-.navigation {
-  display: flex;
-  padding-right: 30px;
-  gap: 10px;
+.navigation{
+    padding-right: 50px;
 }
 
-#logout{
-  cursor: pointer;
-  padding: 8px 12px;
-  color: black;
-  border-radius: 4px;
+/*
+    main
+*/
+.main-container{
+    height: calc(100vh - 10vh);
+    display: flex;
 }
 
-.profile {
-  position: relative;
-  margin-top: 20px;
-  margin-left: 100px;
-  width: 100%;
-  height: 150px;
+.left-column{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 
-.img img {
-  margin-top: 16px;
-  margin-left: 8px;
-  padding-top: 5px;
+.profile-container{
+    display: flex;
+    height: 20%;
+    align-items: flex-start;     /* 縦方向中央 */
+    padding: 50px 0 0 50px;
 }
 
-#user-name {
-  position: absolute;
-  left: 110px;
-  top: 100px;
-  margin-top: 16px;
-  margin-left: 8px;
+#user-name{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 100px;
 }
 
-/* ========================
-   投稿フォーム（左側）
-======================== */
-.form-container {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  margin-left: 100px;
+.form-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
 }
 
-.form {
-  width: 20%;
-  margin-top: 24px;
-  margin-left: 8px;
-  background-color: white;
+#tweetInput{
+    background-color: #fdf8f2;
+    border: 2px solid #c8a165;
+    margin: 50px 50px 5px 50px;
 }
 
-.form-input {
-  width: 100%;
-  background-color: #fdf8f2;
-  border: 2px solid #c8a165;
-  border-radius: 12px;
-  padding: 8px;
-  font-size: 1rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
-  resize: none;
+.form{
+    margin: 10px 50px 10px 50px;
 }
 
-.form-input:focus {
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
+.form-button{
+    padding: 7px 5px 6px 5px;
 }
 
-.custom-file-button {
-  padding: 8.8px 5px 9.5px 5px;
-  font-size: 12px;
-  background: linear-gradient(145deg, #d7a86e, #a97442);
-  border: 2px solid #8b5e3c;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: inset 2px 2px 5px #7b4f2a, inset -2px -2px 5px #c68c53;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  transition: transform 0.1s;
+.custom-file-button{
+    padding: 4px 5px 4px 5px;
 }
 
-.custom-file-button:hover {
-  background: #b97b45;
-  transform: scale(1.02);
+.form-button, .custom-file-button{
+    background: linear-gradient(145deg, #d7a86e, #a97442);
+    box-shadow: inset 2px 2px 5px #7b4f2a, inset -2px -2px 5px #c68c53;
+    border-radius: 8px;
+    border: 2px solid #8b5e3c;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: white;
+    cursor: pointer;
 }
 
-.custom-file-button:active {
-  transform: scale(0.98);
+input[type="file"]{
+    display: none;
 }
 
-.form-button {
-  padding: 8px 20px;
-  background: linear-gradient(145deg, #d7a86e, #a97442);
-  border: 2px solid #8b5e3c;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: inset 2px 2px 5px #7b4f2a, inset -2px -2px 5px #c68c53;
-  font-family: 'Noto Sans JP', sans-serif;
-  cursor: pointer;
-  transition: transform 0.1s;
+.tab-container{
+    width: 60%;
+    padding: 20px 10px 0 20px;
 }
 
-#tweet-image{
-  display: none;
-  width: 50px;
-  height:30px; 
+.tab{
+    display: flex;
+    background-color: #f3f4f6;
+    gap: 4px;
+    padding-left: 10px;
 }
 
-#image-name{
-  font-size: 10px;
+.tab-button{
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #d1d5db;
+    color: #1e3a8a;
+    border: none;
+    cursor: pointer;
 }
 
-.form-button:hover {
-  background: #b97b45;
-  transform: scale(1.02);
+.tab-button.active{
+    background-color: white;
+    color: black;
 }
 
-.form-button:active {
-  transform: scale(0.98);
+.search-toggle-container{
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    gap: 2px;
+    background-color: #f3f4f6;
 }
 
-/* ========================
-   タブ・検索ボックス（右側）
-======================== */
-.tab-container {
-  width: 60%;
-  margin-left: 60px;
-  margin-top: -150px; /* 上の余白をなくす */
-  position: relative;   /* ← 追加 */
-  z-index: 10;          /* ← 追加: 数字が大きいほど前面にくる */
+.form-input{
+    width: 80%;
+    margin-left: 10px;
 }
 
-/* タブボタン */
-.tab {
-  display: flex;
-  gap: 4px;
-  padding-left: 10px;
-  background-color: #f3f4f6;
+.search-button, .form-input, .toggle-icon{
+    border-radius: 6px;
+    background: #fdf8f2;
+    border: 1px solid #8b5e3c;
 }
 
-.tab-button {
-  padding: 15px 30px;
-  font-size: 16px;
-  border-radius: 6px;
-  background-color: #d1d5db;
-  color: #1e3a8a;
-  border: none;
-  cursor: pointer;
+.tab-content{
+    width: 100%;
+    position: relative;
 }
 
-.tab-button.active {
-  background-color: white;
-  color: black;
+.tab-content.active{
+    display: block;
 }
 
-/* ========================
-   タブの中身表示
-======================== */
-.tab-content {
-  width: 100%;
-  margin-top: 10px;
-  display: none;
+.content-container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex: 1;
+    cursor: pointer;
 }
 
-.tab-content.active {
-  display: block;
+#tweetList{
+    height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* ========================
-   投稿一覧ラッパー
-======================== */
-#tweetlist,#worldtweetlist{
-   position: relative; /* 追加 */
-   justify-content: space-between;
-   align-items: flex-start;
-   max-height: 500px;
-   overflow-y: auto;
-   padding-right: 8px;
-}
-
-/* ========================
-   各投稿（tweet）
-======================== */
 .tweet-block {
   display: flex;
   align-items: flex-start;
@@ -225,21 +175,6 @@ html, body {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 16px;
-}
-
-.tweet-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  cursor: pointer;
 }
 
 .tweet-name {
@@ -255,60 +190,17 @@ html, body {
   white-space: pre-wrap;
 }
 
-.tweet-content-image {
-  max-width: 100%;
-  max-height: 300px;
-  border-radius: 8px;
-  margin-top: 8px;
-  object-fit: contain;
+.tweet-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.search-toggle-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* ボタンと検索ボックスを左寄せ */
-  gap: 8px; /* 余白 */
+.tweet-content-image{
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    margin-top: 8px;
+    object-fit: contain;
 }
-
-.search-box {
-  flex-grow: 1;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 10px; /* 初期は上下paddingなし */
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.search-box.open {
-  max-height: 30px; /* inputとbuttonがちょうど収まる高さ */
-  display: flex;  /* 中身横並びに */
-  gap: 8px;
-  align-items: center;
-}
-
-#search-input {
-  flex-grow: 1;
-  height: 10px;
-  font-size: 1rem;
-}
-
-.search-button {
-  padding: 4px 5px;
-  font-size: 10px;
-  cursor: pointer;
-}
-
-.toggle-icon {
-  cursor: pointer;
-  user-select: none;
-  padding: 6px 10px;
-  font-size: 14px;
-  background: none;
-  border: none;
-}
-
-

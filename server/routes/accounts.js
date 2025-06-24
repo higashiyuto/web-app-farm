@@ -38,7 +38,7 @@ router.get('/user', async(req, res)=>{
 // すべてのユーザの情報を読み込む
 router.get('/list', async(req, res)=>{
     try{
-      const users = await Account.find({}, 'name age email passwordHash createdAt').lean();
+      const users = await Account.find({}, 'name age email profileImageUrl createdAt').lean();
       res.json(users);
     }catch(err){
       console.error('ユーザ一覧取得エラー: ', err);

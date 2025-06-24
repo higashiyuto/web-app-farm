@@ -1,6 +1,8 @@
 import { renderWorldTweets } from './display.js';
 import { loadWorldTweets } from '../../../../services/tweet/loadWorldTweets.js';
-import { setupSearchToggle } from './setupSearchToggle.js';
+import { loadWorldUserInfo } from '../../../../services/account/loadWorldUserInfo.js';
+import { loadUserInfo } from '../../../../services/account/loadUserInfo.js';
+import { loadTweets } from '../../../../services/tweet/loadTweets.js';
 
 export async function setupTabSwitching(user){
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -23,8 +25,17 @@ export async function setupTabSwitching(user){
 
             if(targetTab === '2') {
                 try{
-                    const tweets = await loadWorldTweets();
-                    renderWorldTweets(tweets,'worldtweetlist');
+                    const allUser = await loadWorldUserInfo();
+                    const allTweets = await loadWorldTweets(allUser);
+                    renderWorldTweets(allTweets);
+                }catch(err){
+                    console.error('Worldツイート取得エラー: ', err);
+                }
+            }else if(targetTab === '1'){
+                try{
+                    const user = await loadUserInfo();
+                    const tweets = await loadTweets(user);
+                    renderTweets(tweets);
                 }catch(err){
                     console.error('Worldツイート取得エラー: ', err);
                 }

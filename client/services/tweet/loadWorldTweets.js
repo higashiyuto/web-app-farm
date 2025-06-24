@@ -3,7 +3,7 @@ const BASE_URL = isLocal ? 'http://localhost:3000' : window.location.origin;
 
 export async function loadWorldTweets(){
     try {
-        const res = await fetch(`${BASE_URL}/api/tweets/all`);
+        const res = await fetch(`${BASE_URL}/api/tweets/list`);
         const data = await res.json();
         if(!res.ok) throw new Error(data.error);
 
