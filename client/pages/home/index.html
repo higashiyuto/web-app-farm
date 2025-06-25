@@ -16,21 +16,25 @@
         </div>
     </div>
 
-    <div class="profile-container">
-        <div class="profile">
-            <div class="img"><img src="" id="user-image" alt="ユーザ画像"></div>
-            <div id="user-name"></div>
-        </div>
-    </div>
+    <div class="main-container">
+        <div class="left-column">
+            <div class="profile-container">
+                <div class="profile">
+                    <div class="img"><img src="" id="user-image" alt="ユーザ画像"></div>
+                    <div id="user-name"></div>
+                </div>
+            </div>
 
-    <div class="form-container">
-        <!-- 左：フォーム -->
-        <div class="form">
-            <textarea id="tweetInput" rows="15" placeholder="いまどうしてる？" class="form-input"></textarea>
-            <button id="post-button" class="form-button">投稿</button>
-            <label for="tweet-image" class="custom-file-button">画像を選択</label>
-            <input type="file" id="tweet-image" name="image">
-            <p id="image-name"></p>
+            <div class="form-container">
+                <textarea id="tweetInput" rows="15" placeholder="いまどうしてる？" class="form-input"></textarea>
+                <!-- 左：フォーム -->
+                <div class="form">
+                    <button id="post-button" class="form-button">投稿</button>
+                    <label for="tweet-image" class="custom-file-button">画像を選択</label>
+                    <input type="file" id="tweet-image" name="image">
+                    <p id="image-name"></p>
+                </div>
+            </div>
         </div>
 
         <!-- 右：タブ -->
@@ -50,7 +54,7 @@
                 <div class="search-toggle-container">
                     <div id="search-box" class="search-box hidden">
                         <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input" />
-                        <button class="search-button" class="form-button">検索</button>
+                        <button class="search-button">検索</button>
                     </div>
                     <button class="toggle-search" class="toggle-icon">▼</button>
                 </div>
@@ -64,22 +68,8 @@
                 </div>
             </div>
             <div id="tab-content-2" class="tab-content">
-                <!-- 検索ボックス本体（最初は非表示） -->
-                <div class="search-toggle-container">
-                    <div id="search-box" class="search-box hidden">
-                        <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input" />
-                        <button class="search-button" class="form-button">検索</button>
-                    </div>
-                    <button class="toggle-search" class="toggle-icon">▼</button>
-                </div>
-                <div id="worldtweetlist">
-                    <img src="" alt="">
-                    <div class="content-container">
-                        <div class="name"></div>
-                        <div class="content"></div>
-                        <div class="tweet-contract-image"></div>
-                    </div>
-                </div>
+                <h3>タブ2の内容</h3>
+                <p>これはタブ2の内容です。</p>
             </div>
             <div id="tab-content-3" class="tab-content">
                 <h3>タブ3の内容</h3>

@@ -1,4 +1,3 @@
-
 // Node.jsモジュールの読み込み
 const express = require('express');
 const bcrypt = require('bcrypt');
