@@ -23,15 +23,7 @@ export async function setupTabSwitching(user){
                 }
             });
 
-            if(targetTab === '2') {
-                try{
-                    const allUser = await loadWorldUserInfo();
-                    const allTweets = await loadWorldTweets(allUser);
-                    renderWorldTweets(allTweets);
-                }catch(err){
-                    console.error('Worldツイート取得エラー: ', err);
-                }
-            }else if(targetTab === '1'){
+            if(targetTab === '1'){
                 try{
                     const user = await loadUserInfo();
                     const tweets = await loadTweets(user);
