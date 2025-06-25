@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pages/home/style.css">
-    <!-- 例：Mochiy Pop One -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-    <title>FarmLink</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="header-container">
@@ -19,15 +18,11 @@
     <div class="main-container">
         <div class="left-column">
             <div class="profile-container">
-                <div class="profile">
-                    <div class="img"><img src="" id="user-image" alt="ユーザ画像"></div>
-                    <div id="user-name"></div>
-                </div>
+                <div class="img"><img src="" id="user-image" alt="ユーザ画像"></div>
+                <div id="user-name">東 勇斗</div>
             </div>
-
             <div class="form-container">
-                <textarea id="tweetInput" rows="15" placeholder="いまどうしてる？" class="form-input"></textarea>
-                <!-- 左：フォーム -->
+                <textarea id="tweetInput" rows="20" placeholder="いまどうしてる?" class="form-input"></textarea>
                 <div class="form">
                     <button id="post-button" class="form-button">投稿</button>
                     <label for="tweet-image" class="custom-file-button">画像を選択</label>
@@ -37,51 +32,53 @@
             </div>
         </div>
 
-        <!-- 右：タブ -->
         <div class="tab-container">
-            <!-- タブボタン -->
             <div class="tab">
-                <!-- active を削除 -->
                 <button class="tab-button active" data-tab="1">Posts</button>
                 <button class="tab-button" data-tab="2">Worlds</button>
                 <button class="tab-button" data-tab="3">Talk</button>
                 <button class="tab-button" data-tab="4">Learn</button>
             </div>
-
-            <!-- タブ内容 -->
             <div id="tab-content-1" class="tab-content active">
-                <!-- 検索ボックス本体（最初は非表示） -->
                 <div class="search-toggle-container">
-                    <div id="search-box" class="search-box hidden">
-                        <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input" />
-                        <button class="search-button">検索</button>
-                    </div>
-                    <button class="toggle-search" class="toggle-icon">▼</button>
+                    <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input">
+                    <button class="search-button">検索</button>
+                    <button class="toggle-icon">▼</button>
                 </div>
-                <div id="tweetlist">
+                <div id="tweetList">
                     <img src="" alt="">
                     <div class="content-container">
-                        <div class="name"></div>
-                        <div class="content"></div>
-                        <div class="image"></div>
+                        <img src="" alt="" class="tweet-image">
+                        <div class="tweet-name"></div>
+                        <div class="tweet-content"></div>
+                        <div class="tweet-content-image"></div>
                     </div>
                 </div>
             </div>
             <div id="tab-content-2" class="tab-content">
-                <h3>タブ2の内容</h3>
-                <p>これはタブ2の内容です。</p>
+                <div class="search-toggle-container">
+                    <input type="text" id="search-input" placeholder="キーワードで検索..." class="form-input">
+                    <button class="search-button">検索</button>
+                    <button class="toggle-icon">▼</button>
+                </div>
+                <div id="tweetList2">
+                    <img src="" alt="">
+                    <div class="content-container">
+                        <img src="" alt="" class="tweet-image">
+                        <div class="tweet-name"></div>
+                        <div class="tweet-content"></div>
+                        <div class="tweet-content-image"></div>
+                    </div>
+                </div>
             </div>
             <div id="tab-content-3" class="tab-content">
-                <h3>タブ3の内容</h3>
-                <p>これはタブ3の内容です。</p>
+                
             </div>
             <div id="tab-content-4" class="tab-content">
-                <h3>タブ4の内容</h3>
-                <p>これはタブ4の内容です。</p>
+                
             </div>
         </div>
     </div>
-    
-    <script type="module" src="/pages/home/script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 export function renderTweets(tweets, user) {
-    const tweetList = document.getElementById('tweetlist');
+    const tweetList = document.getElementById('tweetList');
     tweetList.innerHTML = '';
 
     tweets.forEach(tweet => {
@@ -9,7 +9,7 @@ export function renderTweets(tweets, user) {
 
         // HTML構築用の変数を最初に定義
         let tweetHTML = `
-            <img class="tweet-img" src="${user.image}" alt="プロフィール画像">
+            <img class="tweet-image" src="${user.image}" alt="プロフィール画像">
             <div class="content-container">
                 <div class="tweet-name">${user.name}</div>
                 <div class="tweet-content">${tweet.content}</div>
@@ -29,8 +29,8 @@ export function renderTweets(tweets, user) {
 }
 
 
-export async function renderWorldTweets(tweets, elementId){
-    const tweetList = document.getElementById(elementId);
+export async function renderWorldTweets(tweets){
+    const tweetList = document.getElementById('tweetList2');
     tweetList.innerHTML = ''; // 既存のツイートをクリア
 
     tweets.forEach(tweet => {
@@ -44,7 +44,7 @@ export async function renderWorldTweets(tweets, elementId){
         const tweetBlock = document.createElement('div');
         tweetBlock.className = 'tweet-block';
         tweetBlock.innerHTML = `
-            <img class="tweet-img" src="${userImage}" alt="プロフィール画像">
+            <img class="tweet-image" src="${userImage}" alt="プロフィール画像">
             <div class="content-container">
                 <div class="tweet-name">${userName}</div>
                 <div class="tweet-content">${tweet.content}</div>
