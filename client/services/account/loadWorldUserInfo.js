@@ -1,7 +1,6 @@
 const isLocal = window.location.hostname === 'localhost';
 const BASE_URL = isLocal ? 'http://localhost:3000' : window.location.origin;
 
-let currentUser = null;
 export async function loadWorldUserInfo() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) return;

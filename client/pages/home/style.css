@@ -204,3 +204,11 @@ input[type="file"]{
     margin-top: 8px;
     object-fit: contain;
 }
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}

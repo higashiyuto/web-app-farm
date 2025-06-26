@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/all', async(req, res)=>{
+router.get('/list', async(req, res)=>{
     try{
         const tweets = await Tweet.find()
         .populate('author', 'name email profileImageUrl')
