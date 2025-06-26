@@ -159,7 +159,7 @@ input[type="file"]{
     cursor: pointer;
 }
 
-#tweetList{
+#tweetList,#tweetList2{
     height: 600px;
     overflow-y: auto;
     display: flex;
